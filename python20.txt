@@ -1,0 +1,22 @@
+//You are given a NXM integer array matrix with space separated elements (N = rows and  M= columns).
+Your task is to print the transpose and flatten results.//
+
+
+
+CODE:
+import numpy
+narr = numpy.array([input().split() for _ in range(int(input().split()[0]))],int)
+print (narr.transpose())
+print (narr.flatten())
+
+
+
+
+Input (stdin)
+2 2
+1 2
+3 4
+Expected Output
+[[1 3]
+ [2 4]]
+[1 2 3 4]

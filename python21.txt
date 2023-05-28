@@ -1,0 +1,43 @@
+//You are given two integer arrays of size NXP and MXP (N&M are rows, and P is the column). Your task is to concatenate the arrays along axis 0.//
+
+
+
+
+
+CODE:
+from numpy import concatenate
+
+N, M, P = [int(x) for x in input().split()]
+
+arr1 = [[int(x) for x in input().split()] for _ in range(N)]
+arr2 = [[int(x) for x in input().split()] for _ in range(M)]
+
+print(concatenate((arr1, arr2), axis=0))
+
+
+
+
+
+
+
+
+
+
+
+Input (stdin)
+4 3 2
+1 2
+1 2
+1 2
+1 2
+3 4
+3 4
+3 4
+Your Output (stdout)
+[[1 2]
+ [1 2]
+ [1 2]
+ [1 2]
+ [3 4]
+ [3 4]
+ [3 4]]

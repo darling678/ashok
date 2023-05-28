@@ -1,0 +1,35 @@
+//You are given a string S.
+Your task is to find out whether S is a valid regex or not.//
+
+
+
+
+
+
+CODE:
+import re;
+
+N = int(input())
+for _ in range(N):
+    try:
+        re.compile(input())
+        Output = True
+    except re.error:
+        Output = False
+    
+    print(Output)
+
+
+
+
+
+
+
+
+Input (stdin)
+2
+.*\+
+.*+
+Expected Output
+True
+False

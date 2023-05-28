@@ -1,0 +1,45 @@
+You are given two integer arrays, A and B of dimensions NXM.
+Your task is to perform the following operations:
+
+1.Add (A+B)
+2.Subtract (A-B)
+3.Multiply (A*B)
+4.Integer Division (A/B)
+5.Mod (A%B)
+6.Power (A**B)
+
+Note
+There is a method numpy.floor_divide() that works like numpy.divide() except it performs a floor division.//
+
+
+
+
+CODE:
+import numpy
+
+N, M = map(int, input().split())
+
+A = numpy.array([list(map(int, input().split())) for n in range(N)])
+B = numpy.array([list(map(int, input().split())) for n in range(N)])
+
+print(A + B)
+print(A - B)
+print(A * B)
+print(A // B)
+print(A % B)
+print(A ** B)
+
+
+
+Input (stdin)
+1 4
+1 2 3 4
+5 6 7 8
+Expected Output
+[[ 6  8 10 12]]
+[[-4 -4 -4 -4]]
+[[ 5 12 21 32]]
+[[0 0 0 0]]
+[[1 2 3 4]]
+[[    1    64  2187 65536]]
+

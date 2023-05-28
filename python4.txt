@@ -1,0 +1,22 @@
+//The provided code stub reads two integers, a and b,from STDIN.
+
+Add logic to print two lines. The first line should contain the result of integer division, a//b . The second line should contain the result of float division, a/b. No rounding or formatting is necessary.//
+
+
+
+CODE:
+a=3
+b=5
+c=a//b
+d=a/b
+print(c)
+print(d)
+    
+
+
+Input (stdin)
+4
+3
+Your Output (stdout)
+1
+1.3333333333333333

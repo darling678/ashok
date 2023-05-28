@@ -1,0 +1,81 @@
+//Given a list of rational numbers,find their product.
+
+Concept
+The reduce() function applies a function of two arguments cumulatively on a list of objects in succession from left to right to reduce it to one value. Say you have a list, say [1,2,3] and you have to find its sum.
+
+>>> reduce(lambda x, y : x + y,[1,2,3])
+6
+You can also define an initial value. If it is specified, the function will assume initial value as the value given, and then reduce. It is equivalent to adding the initial value at the beginning of the list. For example:
+
+>>> reduce(lambda x, y : x + y, [1,2,3], -3)
+3
+
+>>> from fractions import gcd
+>>> reduce(gcd, [2,4,8], 3)
+1//
+
+
+
+
+
+
+
+
+
+
+CODE:
+from fractions import Fraction
+from functools import reduce
+
+def product(fracs):
+    t = Fraction(reduce(lambda x, y: x * y, fracs))
+    
+    return t.numerator, t.denominator
+
+if __name__ == '__main__':
+    fracs = []
+    for _ in range(int(input())):
+        fracs.append(Fraction(*map(int, input().split())))
+    result = product(fracs)
+    print(*result)
+
+
+
+
+
+
+
+
+
+
+Input (stdin)
+21
+684025282 932952183
+349232934 278093065
+778706161 742081687
+374870211 874099626
+849763633 211127281
+566205501 508794028
+814324820 443967409
+402053385 120666811
+261003218 519477752
+134531387 354698174
+790584924 879493679
+520320652 475787580
+480239279 930995305
+465217671 718416348
+270497402 819933293
+216292652 688271440
+76664269 6180883
+802885525 457264574
+194701183 725188300{-truncated-}
+
+Expected Output
+74790233171571533788139643555367225289826631483666244323847605188646700240612034785976036955090749611058399058034858378685468946344902316904554919572847100124591273 961508179419841322746551848560143742117761703239480430594368429374085134369013242621198065925088545157681872718892670013283895776681384468633178542534238237022404800
+
+
+
+
+
+
+

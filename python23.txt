@@ -1,0 +1,21 @@
+//Your task is to print an array of size NXM with its main diagonal elements as 1's and 0's everywhere else.//
+
+
+
+
+CODE:
+import numpy
+
+numpy.set_printoptions(sign=' ')
+print(numpy.eye(*map(int, input().split())))
+
+
+
+
+
+Input (stdin)
+3 3
+Expected Output
+[[ 1.  0.  0.]
+ [ 0.  1.  0.]
+ [ 0.  0.  1.]]

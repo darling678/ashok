@@ -1,0 +1,31 @@
+//You are given two arrays A and B. Both have dimensions of NXN.
+Your task is to compute their matrix product.//
+
+
+
+
+CODE:
+import numpy
+
+n = int(input())
+a = numpy.array([input().split() for _ in range(n)], int)
+b = numpy.array([input().split() for _ in range(n)], int)
+print(numpy.dot(a, b))
+
+
+
+
+
+
+
+
+
+Input (stdin)
+2
+1 2
+3 4
+1 2
+3 4
+Expected Output
+[[ 7 10]
+ [15 22]]

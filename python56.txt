@@ -1,0 +1,51 @@
+//Dr. John Wesley has a spreadsheet containing a list of student's IDs, marks, class, and name.
+
+Your task is to help Dr. Wesley calculate the average marks of the students.
+
+Average = Sum of all marks / Total Students
+
+Note:
+1.Columns can be in any order. IDs, marks, class, and name can be written in any order in the spreadsheet.
+2.Column names are ID, MARKS, CLASS, and NAME. (The spelling and case type of these names won't change.)//
+
+
+
+
+
+CODE:
+from collections import namedtuple
+
+N = int(input())
+
+Std_lst = []
+
+for i in range(N+1):
+    
+    if i == 0:
+        header = input()
+        Students = namedtuple('Students',header)
+    else:
+        student = input().split()
+        Std_lst.append(Students(student[0],student[1],student[2], student[3]))
+
+std_sum = 0
+for std in Std_lst:
+    std_sum += int(std.MARKS)
+
+print(std_sum/N)
+
+
+
+
+
+
+Input (stdin)
+5
+ID         MARKS      NAME       CLASS
+1          97         Raymond    7
+2          50         Steven     4
+3          91         Adrian     9
+4          72         Stewart    5
+5          80         Peter      6
+Expected Output
+78.00

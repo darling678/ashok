@@ -1,0 +1,8 @@
+//Here is a sample line of code that can be executed in Python.//
+
+CODE:
+print("Hello, World!")
+
+
+Expected Output:
+Hello, World!

@@ -1,0 +1,32 @@
+//You are given the shape of the array in the form of space-separated integers, each integer representing the size of different dimensions, your task is to print an array of the given shape and integer type using the tools numpy.zeros and numpy.ones.//
+
+
+
+CODE:
+import numpy as np
+dims = input().split()
+dims = [int(i) for i in dims]
+print(np.zeros(tuple(dims),dtype=np.int))
+print(np.ones(tuple(dims),dtype=np.int))
+
+
+
+Input (stdin)
+3 3 3
+Expected Output
+[[[0 0 0]
+  [0 0 0]
+  [0 0 0]]
+ [[0 0 0]
+  [0 0 0]
+  [0 0 0]]
+ [[0 0 0]
+  [0 0 0]
+  [0 0 0]]]
+[[[1 1 1]
+  [1 1 1]
+  [1 1 1]]
+ [[1 1 1]
+  [1 1 1]
+  [1 1 1]]
+ [[1 1 1]

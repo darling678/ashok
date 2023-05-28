@@ -1,0 +1,27 @@
+//Given an integer, n,print the following values for each integer i from 1 to n :
+
+1.Decimal
+2.Octal
+3.Hexadecimal (capitalized)
+4.Binary//
+
+
+
+CODE:
+def print_formatted(number):
+    pad = number.bit_length()
+    for i in range(1,number+1):
+        print(str(i).rjust(pad),oct(i).split("o")[1].rjust(pad),hex(i).split("x")[1].upper().rjust(pad),bin(i).split("b")[1].rjust(pad))
+    # your code goes here
+
+if __name__ == '__main__':
+    n = int(input())
+    print_formatted(n)
+
+
+
+Input (stdin)
+2
+Your Output (stdout)
+ 1  1  1  1
+ 2  2  2 10

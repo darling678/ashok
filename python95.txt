@@ -1,0 +1,54 @@
+//start() & end()
+These expressions return the indices of the start and end of the substring matched by the group.
+
+Code :
+
+>>> import re
+>>> m = re.search(r'\d+','1234')
+>>> m.end()
+4
+>>> m.start()
+0
+
+Task :
+You are given a string S.
+Your task is to find the indices of the start and end of string k in S.//
+
+
+
+
+
+
+
+
+
+CODE:
+import re
+
+S, k = input(), input()
+matches = re.finditer(r'(?=(' + k + '))', S)
+
+anymatch = False
+for match in matches:
+    anymatch = True
+    print((match.start(1), match.end(1) - 1))
+
+if anymatch == False:
+    print((-1, -1))
+
+
+
+
+
+
+
+
+Input (stdin)
+aabcdeffgabcdef
+abcdef
+Expected Output
+(1, 6)
+(9, 14)
+
+
+

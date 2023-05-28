@@ -1,0 +1,26 @@
+//In this task, we would like for you to appreciate the usefulness of the groupby() function of itertools . 
+To read more about this function, Check this out .
+
+You are given a string S. Suppose a character 'c' occurs consecutively X times in the string. Replace these consecutive occurrences of the character 'c' with (X,c)
+in the string.
+For a better understanding of the problem, check the explanation.//
+
+
+
+
+
+CODE:
+from itertools import *
+
+io = input()
+for i,j in groupby(map(int,list(io))):
+    print(tuple([len(list(j)), i]) ,end = " ")
+
+
+
+
+
+Input (stdin)
+1222311
+Expected Output
+(1, 1) (3, 2) (1, 3) (2, 1)

@@ -1,0 +1,61 @@
+//https://s3.amazonaws.com/hr-challenge-images/9419/1437830945-a56a63892c-AB.png
+
+.intersection()
+The .intersection() operator returns the intersection of a set and the set of elements in an iterable.
+Sometimes, the & operator is used in place of the .intersection() operator, but it only operates on the set of elements in set.
+The set is immutable to the .intersection() operation (or & operation).
+
+>>> s = set("Hacker")
+>>> print s.intersection("Rank")
+set(['a', 'k'])
+
+>>> print s.intersection(set(['R', 'a', 'n', 'k']))
+set(['a', 'k'])
+
+>>> print s.intersection(['R', 'a', 'n', 'k'])
+set(['a', 'k'])
+
+>>> print s.intersection(enumerate(['R', 'a', 'n', 'k']))
+set([])
+
+>>> print s.intersection({"Rank":1})
+set([])
+
+>>> s & set("Rank")
+set(['a', 'k'])
+
+Task
+The students of District College have subscriptions to English and French newspapers. Some students have subscribed only to English, some have subscribed only to French, and some have subscribed to both newspapers.
+
+You are given two sets of student roll numbers. One set has subscribed to the English newspaper, one set has subscribed to the French newspaper. Your task is to find the total number of students who have subscribed to both newspapers.//
+
+
+
+
+
+
+
+
+CODE:
+N1 = int(input())
+storage1 = set(input().split())
+
+N2 = int(input())
+storage2 = set(input().split())
+
+storage3 = storage2.intersection(storage1)
+
+print(len(storage3))
+
+
+
+
+
+
+Input (stdin)
+9
+1 2 3 4 5 6 7 8 9
+9
+10 1 2 3 11 21 55 6 8
+Expected Output
+5

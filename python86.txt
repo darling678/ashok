@@ -1,0 +1,38 @@
+//Integers in Python can be as big as the bytes in your machine's memory. There is no limit in size as there is: 2^31 - 1 (c++ int) or
+ 2^63 - 1 (C++ long long int).
+
+As we know, the result of a^b grows really fast with increasing b.
+Let's do some calculations on very large integers.
+
+Task :
+Read four numbers, a, b, c, and d, and print the result of a^b + c^d.//
+
+
+
+
+
+
+
+
+
+CODE:
+A = int(input())
+B = int(input())
+C = int(input())
+D = int(input())
+
+print((A**B)+(C**D))
+
+
+
+
+
+
+
+Input (stdin)
+9
+29
+7
+27
+Expected Output
+4710194409608608369201743232
